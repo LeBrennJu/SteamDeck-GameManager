@@ -14,14 +14,14 @@ public class DirectoryManager : MonoBehaviour
         ///////////////
         string gameDirectoriesFilePath = Path.Combine(Application.dataPath, "Art/Data", "directoryRoad.json"); // Construit le chemin vers le fichier JSON lié au repertoire CODE EN DUR POUR LE MOMENT :::::: //////
         //////////////
-        gameListPath = Path.Combine(Application.dataPath, "Art/Data", "games.json");// Construit le chemin vers le fichier JSON lié au jeux
+        // gameListPath = Path.Combine(Application.dataPath, "Art/Data", "games.json");// Construit le chemin vers le fichier JSON lié au jeux
 
         string json = File.ReadAllText(gameDirectoriesFilePath); // Lit le contenu du fichier JSON
 
         GameDirectories data = JsonUtility.FromJson<GameDirectories>(json); // Désérialise dans ton modèle existant
 
-        GameManager = new GameManager(gameListPath);
-
+        GameManager = new GameManager();
+// Debug.Log("dans le start di directoryManager "+gameListPath);
         LoadDirectories(data.gameDirectories, "gameDirectories"); // Lance le chargement au démarrage/prend en argument le/les chemins des repertoires de jeux
         GameManager.DetectGames(gameDirectories); 
     }
