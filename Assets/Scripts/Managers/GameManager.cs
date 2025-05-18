@@ -18,7 +18,7 @@ public class GameManager:MonoBehaviour
         gameList=LoadGameList();
         CreateGameList();
     }
-    // // Constructeur :  passes le chemin depuis DirectoryManager
+    // // Constructeur :  passe le chemin depuis DirectoryManager
     public GameManager()
     {
     }
