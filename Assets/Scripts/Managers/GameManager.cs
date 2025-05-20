@@ -40,7 +40,7 @@ public class GameManager:MonoBehaviour
     }
         void CreateGameList()
     {
-        gameListContainer.name = "GameList"; // Assurer que le nom du conteneur est correct
+        gameListContainer.name = "GameList"; // Assurer que le nom du conteneur est correct .
 
         for (int i = 0; i < gameList.games.Count; i++)
         {
